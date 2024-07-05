@@ -1,9 +1,4 @@
 /*Proyecto*/
-/*imagen logo*/
-.navbar-brand img {
-    width: 150px;  /* Ajusta el ancho a 150 píxeles */
-    height: 150px; /* Ajusta el alto a 100 píxeles */
-}
 
 body {
     background-color: pink;
@@ -20,7 +15,8 @@ body {
  }
  
  .header_section .navbar-brand img {
-    max-height: 50px;
+    max-width: 75px;  /* Ajusta el ancho a 150 píxeles */
+    height: 75px; /* Ajusta el alto a 100 píxeles */
  }
  
  .navbar-nav .nav-link {
