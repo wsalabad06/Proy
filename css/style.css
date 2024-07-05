@@ -100,6 +100,8 @@ body {
 
 .icon_1 img {
    max-width: 100px;
+   height: 100px;
+   width: auto;
 }
 
 .furnitures_text {
@@ -167,7 +169,7 @@ body {
 }
 
 
-/* Estilos para la sección de furnitures */
+/* Estilos para la sección de OPCIONES */
 .furnitures_section {
    background-color: #fff;
    padding: 50px 0;
@@ -204,14 +206,9 @@ body {
 }
 
 .container_main img {
-   max-width: 100%;
-   height: auto;
-}
-
-.container_main img {
-   width: auto;
+   width: 100%;
    /* Ajusta la imagen al 100% del contenedor */
-   height: auto;
+   height: 400px;
    /* Mantén la proporción de la imagen */
    max-width: 400px;
    /* Tamaño máximo opcional */
