@@ -1,0 +1,63 @@
+.contenedor_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.item_flex{
+    flex-grow: 1 1 calc(33.33% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.icon_1 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Titulo{
+    font-size: 1.5rem;
+    color: blue;
+    margin: 10px 0px;
+}
+
+.Descipcion{
+    font-size: 1rem;
+}
+
+@media (max-width: 768px){ -- responsivo
+    .item_flex{
+        flex: 1 1 100%;
+    }
+}
+
+
+/*float*/
+.contenedor_float{
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.item_float{
+    float: left;
+    width: 33.33%;
+    margin-right: 2.5%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.item_float.item_float:nth-child(3n){
+    margin-right: 0px; -- no le aplica margen a la ultima imagen
+}
+
+@media (max-width: 768px){ -- responsivo
+    .item_float{
+        width: 100%;
+        margin-right: 0px;
+    }
+}
