@@ -99,8 +99,8 @@ body {
 }
 
 .icon_1 img {
-   max-width: 100px;
-   height: 100px;
+   max-width: 290px;
+   height: 400px;
    width: auto;
 }
 
@@ -127,6 +127,9 @@ body {
 .read_bt a:hover {
    background-color: #0056b3;
 }
+
+
+/*------------------------------------------*/
 
 /* Estilos para la sección de about */
 .about_section {
@@ -164,7 +167,7 @@ body {
    /* Ajusta la imagen al 100% del contenedor */
    height: auto;
    /* Mantén la proporción de la imagen */
-   max-width: 400px;
+   max-width: 290px;
    /* Tamaño máximo opcional */
 }
 
