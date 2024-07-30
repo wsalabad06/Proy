@@ -104,7 +104,7 @@ body {
    width: auto;
 }
 
-.furnitures_text {
+.product_text {
    font-size: 24px;
    margin-top: 15px;
    margin-bottom: 10px;
@@ -173,7 +173,7 @@ body {
 
 
 /* Estilos para la sección de OPCIONES */
-.furnitures_section {
+.option_section {
    background-color: #fff;
    padding: 50px 0;
    text-align: center;
@@ -190,7 +190,7 @@ body {
    margin-bottom: 30px;
 }
 
-.furnitures_section2 {
+.option_section2 {
    display: flex;
    justify-content: space-around;
    flex-wrap: wrap;
@@ -215,6 +215,16 @@ body {
    /* Mantén la proporción de la imagen */
    max-width: 400px;
    /* Tamaño máximo opcional */
+}
+
+
+/*Footer bootstrap*/
+.container-fluid{
+   display: flex;
+}
+
+.container-fluid .col-sm6{
+   width: 100%;
 }
 
 /* Estilos para la sección de footer */
