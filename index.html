@@ -200,58 +200,6 @@
       </main>
       <!-- Fin de la sección de OPCIONES -->
 
-      <!-- Formulario -->
-      <section id="registro">
-         <h2>Registro</h2>
-         <form action="enviar.php" method="post">
-            <div class="mb-3">
-               <label for="email" class="form-label">Email:</label>
-               <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-               <label for="nombre" class="form-label">Nombre Completo:</label>
-               <input type="text" class="form-control" id="nombre" name="nombre" required>
-            </div>
-            <div class="mb-3">
-               <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento:</label>
-               <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
-            </div>
-            <div class="mb-3">
-               <label for="rango_ingreso" class="form-label">Rango de Ingreso:</label>
-               <input type="number" class="form-control" id="rango_ingreso" name="rango_ingreso" required>
-            </div>
-            <div class="mb-3">
-               <label for="genero" class="form-label">Género:</label>
-               <select class="form-select" id="genero" name="genero" required>
-                  <option value="masculino">Masculino</option>
-                  <option value="femenino">Femenino</option>
-                  <option value="otro">Otro</option>
-               </select>
-            </div>
-            <div class="mb-3">
-               <label for="grado_academico" class="form-label">Grado Académico:</label>
-               <select multiple class="form-select" id="grado_academico" name="grado_academico[]" required>
-                  <option value="primaria">Primaria</option>
-                  <option value="secundaria">Secundaria</option>
-                  <option value="universidad">Universidad</option>
-               </select>
-            </div>
-            <input type="hidden" id="edad" name="edad">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-         </form>
-      </section>
-      
-      <script>
-         document.getElementById('fecha_nacimiento').addEventListener('change', function() {
-            const birthDate = new Date(this.value);
-            const today = new Date();
-            const age = today.getFullYear() - birthDate.getFullYear();
-            document.getElementById('edad').value = age;
-         });
-      </script>
-      
-      <!-- Fin de Formulario -->
-
       <!-- Sección de footer con Bootstrap -->
       <footer class="container-fluid">
          <div class="row">
@@ -279,34 +227,6 @@
          </div>
          </div>
       </footer>
-
-      <!-- Maps -->
-      <!--
-  Copyright 2023 Google LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
-      <!-- Please note unpkg.com is unaffiliated with Google Maps Platform. -->
-      <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
-
-      <!-- Uses components from the Extended Component Library; see
-           https://github.com/googlemaps/extended-component-library for more information
-           on these HTML tags and how to configure them. -->
-      <gmpx-api-loader key="AIzaSyCctgj8b195OmGtbLRZNJMk36teywtIJFc" solution-channel="GMP_QB_locatorplus_v10_cABCDE"></gmpx-api-loader>
-      <gmpx-store-locator map-id="MonisSweets_ID"></gmpx-store-locator>
-
-      <!-- Fin de Maps -->
-
 
       <!-- Sección de derechos de autor -->
       <div class="row">
