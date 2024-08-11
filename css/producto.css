@@ -292,3 +292,21 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+
+.gallery {
+   padding: 40px;
+   background-color: #ffffff;
+}
+
+.gallery-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 20px;
+}
+
+.gallery-grid img {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+}

@@ -13,6 +13,40 @@
 
 
    <body>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             // Efecto de desplazamiento suave
+             const links = document.querySelectorAll('a[href^="#"]');
+             for (let link of links) {
+                 link.addEventListener("click", function(event) {
+                     event.preventDefault();
+                     const targetId = link.getAttribute("href").substring(1);
+                     document.getElementById(targetId).scrollIntoView({
+                         behavior: "smooth"
+                     });
+                 });
+             }
+         });
+     </script>
+     
+     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const apiKey = 'your_api_key';
+          const city = 'Buenos Aires';
+          fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`)
+              .then(response => response.json())
+              .then(data => {
+                  document.getElementById('weather').innerHTML = `
+                      <p>Ciudad: ${data.name}</p>
+                      <p>Temperatura: ${data.main.temp} °C</p>
+                      <p>Clima: ${data.weather[0].description}</p>
+                  `;
+              });
+      });
+  </script>
+  
+
       <!-- Sección de encabezado -->
       <header class="header_section">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,10 +66,6 @@
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="acerca.html">Acerca</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="comprar.html">Comprar</a>
-                     </li>
                      <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                      </li>
@@ -103,7 +133,7 @@
                <h2 class="service_text">Cumpleaños</h2>
                <p class="dummy_text">Gran variedad de opciones personalizadas para poder sorprender!</p>
                <div class="read_bt_main">
-                  <div class="read_bt"><a href="#">Mas...</a></div>
+                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
                </div>
             </div>
             <div class="col-article">
@@ -113,7 +143,7 @@
                   de
                   manera inolvidable</p>
                <div class="read_bt_main">
-                  <div class="read_bt"><a href="#">Mas...</a></div>
+                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
                </div>
             </div>
             <div class="col-article">
@@ -123,7 +153,7 @@
                   amor
                   por lo especial.</p>
                <div class="read_bt_main">
-                  <div class="read_bt"><a href="#">Mas...</a></div>
+                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
                </div>
             </div>
             <div class="col-article">
@@ -132,7 +162,7 @@
                <p class="dummy_text">Impresiona a tus clientes y colaboradores con regalos empresariales exclusivos que
                   dejan una marca duradera</p>
                <div class="read_bt_main">
-                  <div class="read_bt"><a href="#">Mas...</a></div>
+                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
                </div>
             </div>
          </div>

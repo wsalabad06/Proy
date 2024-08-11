@@ -13,6 +13,21 @@
 
 
    <body>
+
+      <script>
+         fetch('services.json')
+             .then(response => response.json())
+             .then(data => {
+                 const servicesList = document.getElementById('services-list');
+                 data.services.forEach(service => {
+                     const listItem = document.createElement('li');
+                     listItem.innerHTML = `<strong>${service.name}</strong>: ${service.description}`;
+                     servicesList.appendChild(listItem);
+                 });
+             });
+     </script>
+     
+
       <!-- Sección de encabezado -->
       <header class="header_section">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,9 +49,6 @@
                         <a class="nav-link" href="acerca.html">Acerca</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="comprar.html">Comprar</a>
-                     </li>
-                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                      </li>
                   </ul>
@@ -56,7 +68,7 @@
  
      <section class="gallery">
          <div class="gallery-grid">
-             <img src="img1.jpg" alt="Imagen 1">
+             <img src="images/art19" alt="Imagen 1">
              <img src="img2.jpg" alt="Imagen 2">
              <img src="img3.jpg" alt="Imagen 3">
              <!-- Agrega más imágenes según sea necesario -->

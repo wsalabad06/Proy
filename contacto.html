@@ -8,7 +8,22 @@
 
    <!-- Estilos CSS -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/contacto.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="scr/maps.js"></script>
+
+   <script>
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Santa Bárbara de Heredia","address1":"Heredia Province","address2":"Santa Bárbara de Heredia, Costa Rica","coords":{"lat":10.03951656863293,"lng":-84.15048439200439},"placeId":"ChIJ02TkypDwoI8R4VhW_aTh5AY"}
+        ],
+        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "AIzaSyAIyNB5ebTIjP6eXRRvGoXb0Z4rH0hhHfQ",
+        "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+      };
+
+    </script>
+    <!-- Template Main JS File -->
+  <script src="scr/weather.js"></script>
 </head>
 
 
@@ -32,9 +47,6 @@
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="acerca.html">Acerca</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="comprar.html">Comprar</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -103,32 +115,84 @@
       <!-- Fin de Formulario -->
 
        <!-- Maps -->
-      <!--
-  Copyright 2023 Google LLC
+    <!-- Please note unpkg.com is unaffiliated with Google Maps Platform. -->
+    <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
-      <!-- Please note unpkg.com is unaffiliated with Google Maps Platform. -->
-      <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
-
-      <!-- Uses components from the Extended Component Library; see
-           https://github.com/googlemaps/extended-component-library for more information
-           on these HTML tags and how to configure them. -->
-      <gmpx-api-loader key="AIzaSyCctgj8b195OmGtbLRZNJMk36teywtIJFc" solution-channel="GMP_QB_locatorplus_v10_cABCDE"></gmpx-api-loader>
-      <gmpx-store-locator map-id="MonisSweets_ID"></gmpx-store-locator>
+    <!-- Uses components from the Extended Component Library; see
+         https://github.com/googlemaps/extended-component-library for more information
+         on these HTML tags and how to configure them. -->
+    <gmpx-api-loader key="AIzaSyAIyNB5ebTIjP6eXRRvGoXb0Z4rH0hhHfQ" solution-channel="GMP_QB_locatorplus_v10_c"></gmpx-api-loader>
+    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
 
       <!-- Fin de Maps -->
 
+      <main id="main">
+
+         <!-- ======= Intro Single ======= -->
+         <section class="intro-single">
+           <div class="container">
+             <div class="row">
+               <div class="col-md-12 col-lg-8">
+                 <div class="title-single-box">
+                   <h1 class="title-single">Información del clima para retirar pedido, o solicitarlo</h1>
+                   <span class="color-text-a">El Clima en su localidad</span>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section><!-- End Intro Single-->
+     
+         <!-- ======= Property Grid ======= -->
+         <section class="property-grid grid">
+           <div class="container">
+             <div id="openweatherid" class="row">
+     
+               <!-- ======= Datos de Propiedades ======= -->
+     
+               <div id="tiempo">
+     
+                 <table id="tblw">
+     
+                   <tbody>
+                     <tr>
+                       <td rowspan="4"><img id="tiempoIcon" alt="No Existe Icono" /></td>
+                       <td>Lugar</td>
+                       <td>
+                         <p id="lug">No Data</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Temperatura</td>
+                       <td>
+                         <p id="tem">No Data</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Humedad</td>
+                       <td>
+                         <p id="hum">No Data</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Viento</td>
+                       <td>
+                         <p id="vie">No Data</p>
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+     
+               </div>
+     
+     
+               <!-- ======= Fin de Datos de Propiedades ======= -->
+     
+             </div>
+     
+           </div>
+         </section><!-- End Property Grid Single-->
+     
+       </main><!-- End #main -->
 
       <!-- Sección de derechos de autor -->
       <div class="row">
