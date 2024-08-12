@@ -5,6 +5,7 @@
 body {
    font-family: Arial, sans-serif;
    background-color: pink;
+   /*background-image: url('images/background.jpg'); /* Ruta a la imagen de fondo */
 }
 
 .header_section {
@@ -128,6 +129,14 @@ body {
    background-color: #0056b3;
 }
 
+
+.author-img {
+   display: block;
+   margin: 10px auto; 
+   max-width: 150px; 
+   height: auto; 
+   border-radius: 50%; 
+}
 
 /*------------------------------------------*/
 
@@ -286,3 +295,26 @@ gmpx-store-locator {
   --gmpx-rating-color: #ffb300;
   --gmpx-rating-color-empty: #e0e0e0;
 }
+
+
+/* Archivo: css/style.css */
+
+/* Asegura que las imágenes dentro de las tarjetas sean del mismo tamaño */
+.card-img-top {
+   width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor de la tarjeta */
+   height: 200px; /* Altura fija para todas las imágenes */
+   object-fit: cover; /* Ajusta la imagen para cubrir el área especificada */
+ }
+ 
+ /* Estilo para la sección de productos */
+ .product_section .card {
+   margin-bottom: 2rem; /* Espacio entre las tarjetas de producto */
+ }
+ 
+ /* Estilos adicionales para pantallas más pequeñas */
+ @media (max-width: 768px) {
+   .product_section .card {
+     margin-bottom: 1.5rem; /* Reduce el margen entre tarjetas en pantallas más pequeñas */
+   }
+ }
+ 

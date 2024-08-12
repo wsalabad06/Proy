@@ -18,7 +18,11 @@ body {
     height: 75px;
     /* Ajusta el alto a 100 píxeles */
  }
- 
+
+ .call_text{
+   color: black;
+ }
+
  .navbar-nav .nav-link {
     color: #333;
  }
@@ -127,7 +131,15 @@ body {
  .read_bt a:hover {
     background-color: #0056b3;
  }
+
  
+.author-img {
+   display: block;
+   margin: 10px auto; 
+   max-width: 150px; 
+   height: auto; 
+   border-radius: 50%; 
+} 
  
  /*------------------------------------------*/
  
@@ -321,4 +333,101 @@ gmpx-store-locator {
   --gmpx-hours-color-closed: #d50000;
   --gmpx-rating-color: #ffb300;
   --gmpx-rating-color-empty: #e0e0e0;
+}
+
+/*Info extra*/
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f9f9f9;
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   background-color: #e89ac7;
+   color: white;
+   padding: 20px;
+   text-align: center;
+}
+
+.weather-container {
+   padding: 40px;
+   background-color: #ffffff;
+   text-align: center;
+}
+
+footer {
+   background-color: #e89ac7;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   position: fixed;
+   width: 100%;
+   bottom: 0;
+}
+
+#tblw {
+   margin: auto;
+   width: 50%;
+}
+
+#tblw td {
+   padding: 10px;
+   border: 1px solid #e89ac7;
+}
+
+#tblw img {
+   width: 100px;
+}
+
+
+
+/* Estilos generales del cuerpo */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f4f4f4;
+}
+
+/* Estilos para la sección de la dueña */
+.about-owner {
+   background-color: #fff;
+   padding: 40px 20px;
+   text-align: center;
+   border-bottom: 2px solid #ddd;
+}
+
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.owner-photo {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 5px solid #ddd;
+   margin-bottom: 20px;
+}
+
+.owner-info {
+   max-width: 600px;
+}
+
+.owner-info h1 {
+   font-size: 2em;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.owner-info p {
+   font-size: 1.2em;
+   color: #555;
+   line-height: 1.6;
+   margin-bottom: 20px;
 }

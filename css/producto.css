@@ -3,298 +3,311 @@
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: pink;
+   font-family: Arial, sans-serif;
+   background-color: pink;
+}
+
+.header_section {
+   /*background-color: #f8f9fa;*/
+   padding: 15px 0;
+}
+
+.header_section .navbar-brand img {
+   max-width: 75px;
+   /* Ajusta el ancho a 150 píxeles */
+   height: 75px;
+   /* Ajusta el alto a 100 píxeles */
+}
+
+.navbar-nav .nav-link {
+   color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+   color: #007bff;
+}
+
+.call_text{
+   color: black;
  }
- 
- .header_section {
-    /*background-color: #f8f9fa;*/
-    padding: 15px 0;
- }
- 
- .header_section .navbar-brand img {
-    max-width: 75px;
-    /* Ajusta el ancho a 150 píxeles */
-    height: 75px;
-    /* Ajusta el alto a 100 píxeles */
- }
- 
- .navbar-nav .nav-link {
-    color: #333;
- }
- 
- .navbar-nav .nav-link:hover {
-    color: #007bff;
- }
- 
- .carousel-inner img {
-    width: 100%;
-    height: 400px;
-    object-fit: scale-down;
- }
- 
- .banner_section {
-    text-align: center;
-    /*background-color: #f0f0f0;*/
-    padding: 50px 0;
- }
- 
- .banner_section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
- }
- 
- .banner_section p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
- }
- 
- .contact_bt_main {
-    margin-top: 30px;
- }
- 
- .contact_bt a {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
- }
- 
- .contact_bt a:hover {
-    background-color: #0056b3;
- }
- 
- /* Estilos para la sección de servicios */
- .services_section {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
- }
- 
- .services_taital {
-    font-size: 36px;
-    margin-bottom: 20px;
- }
- 
- .many_taital {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
- }
- 
- .services_section2 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
- }
- 
- .col-article {
-    flex: 0 0 calc(25% - 30px);
-    margin-bottom: 30px;
-    text-align: center;
- }
- 
- .icon_1 img {
-    max-width: 290px;
-    height: 300px;
-    width: auto;
- }
- 
- .product_text {
-    font-size: 24px;
-    margin-top: 15px;
-    margin-bottom: 10px;
- }
- 
- .dummy_text {
-    font-size: 16px;
-    color: #666;
- }
- 
- .read_bt a {
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
- }
- 
- .read_bt a:hover {
-    background-color: #0056b3;
- }
- 
- 
- /*------------------------------------------*/
- 
- /* Estilos para la sección de about */
- .about_section {
-    /*background-color: #f0f0f0;*/
-    padding: 50px 0;
-    text-align: center;
- }
- 
- .about_text {
-    font-size: 36px;
-    margin-bottom: 20px;
- }
- 
- .lorem_text {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
- }
- 
- .about_section .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    padding: 10px 30px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
- }
- 
- .about_section .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
- }
- 
- .image_Acerca img {
-    width: auto;
-    /* Ajusta la imagen al 100% del contenedor */
-    height: auto;
-    /* Mantén la proporción de la imagen */
-    max-width: 290px;
-    /* Tamaño máximo opcional */
- }
- 
- 
- /* Estilos para la sección de OPCIONES */
- .option_section {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
- }
- 
- .our_text {
-    font-size: 36px;
-    margin-bottom: 20px;
- }
- 
- .ipsum_text {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
- }
- 
- .option_section2 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
- }
- 
- .temper_text {
-    font-size: 24px;
-    margin-top: 15px;
-    margin-bottom: 10px;
- }
- 
- .dololr_text {
-    font-size: 16px;
-    color: #666;
- }
- 
- .container_main img {
-    width: 100%;
-    /* Ajusta la imagen al 100% del contenedor */
-    height: 400px;
-    /* Mantén la proporción de la imagen */
-    max-width: 400px;
-    /* Tamaño máximo opcional */
- }
- 
- 
- /*Footer bootstrap*/
- .container-fluid{
-    display: flex;
- }
- 
- .container-fluid .col-sm6{
-    width: 100%;
- }
- 
- /* Estilos para la sección de footer */
- .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
- }
- 
- .social_icon ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
- }
- 
- .social_icon ul li {
-    display: inline-block;
-    margin: 0 10px;
- }
- 
- .social_icon ul li a img {
-    max-width: 30px;
- }
- 
- /* Estilos para el copyright */
- .copyright_section {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
- }
+
+.carousel-inner img {
+   width: 100%;
+   height: 400px;
+   object-fit: scale-down;
+}
+
+.banner_section {
+   text-align: center;
+   /*background-color: #f0f0f0;*/
+   padding: 50px 0;
+}
+
+.banner_section h1 {
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+
+.banner_section p {
+   font-size: 18px;
+   color: #666;
+   margin-bottom: 30px;
+}
+
+.contact_bt_main {
+   margin-top: 30px;
+}
+
+.contact_bt a {
+   background-color: #007bff;
+   color: #fff;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+
+.contact_bt a:hover {
+   background-color: #0056b3;
+}
+
+/* Estilos para la sección de servicios */
+.services_section {
+   background-color: #fff;
+   padding: 50px 0;
+   text-align: center;
+}
+
+.services_taital {
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+
+.many_taital {
+   font-size: 18px;
+   color: #666;
+   margin-bottom: 30px;
+}
+
+.services_section2 {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 30px;
+}
+
+.col-article {
+   flex: 0 0 calc(25% - 30px);
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+.icon_1 img {
+   max-width: 290px;
+   height: 300px;
+   width: auto;
+}
+
+.product_text {
+   font-size: 24px;
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+
+.dummy_text {
+   font-size: 16px;
+   color: #666;
+}
+
+.read_bt a {
+   background-color: #007bff;
+   color: #fff;
+   padding: 8px 15px;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+
+.read_bt a:hover {
+   background-color: #0056b3;
+}
+
+
+.author-img {
+   display: block;
+   margin: 10px auto; 
+   max-width: 150px; 
+   height: auto; 
+   border-radius: 50%; 
+}
+
+
+/*------------------------------------------*/
+
+/* Estilos para la sección de about */
+.about_section {
+   /*background-color: #f0f0f0;*/
+   padding: 50px 0;
+   text-align: center;
+}
+
+.about_text {
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+
+.lorem_text {
+   font-size: 18px;
+   color: #666;
+   margin-bottom: 30px;
+}
+
+.about_section .btn-primary {
+   background-color: #007bff;
+   border-color: #007bff;
+   padding: 10px 30px;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+}
+
+.about_section .btn-primary:hover {
+   background-color: #0056b3;
+   border-color: #0056b3;
+}
+
+.image_Acerca img {
+   width: auto;
+   /* Ajusta la imagen al 100% del contenedor */
+   height: auto;
+   /* Mantén la proporción de la imagen */
+   max-width: 290px;
+   /* Tamaño máximo opcional */
+}
+
+
+/* Estilos para la sección de OPCIONES */
+.option_section {
+   background-color: #fff;
+   padding: 50px 0;
+   text-align: center;
+}
+
+.our_text {
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+
+.ipsum_text {
+   font-size: 18px;
+   color: #666;
+   margin-bottom: 30px;
+}
+
+.option_section2 {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 30px;
+}
+
+.temper_text {
+   font-size: 24px;
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+
+.dololr_text {
+   font-size: 16px;
+   color: #666;
+}
+
+.container_main img {
+   width: 100%;
+   /* Ajusta la imagen al 100% del contenedor */
+   height: 400px;
+   /* Mantén la proporción de la imagen */
+   max-width: 400px;
+   /* Tamaño máximo opcional */
+}
+
+
+/*Footer bootstrap*/
+.container-fluid {
+   display: flex;
+}
+
+.container-fluid .col-sm6 {
+   width: 100%;
+}
+
+/* Estilos para la sección de footer */
+.footer {
+   background-color: #333;
+   color: #fff;
+   padding: 30px 0;
+}
+
+.social_icon ul {
+   list-style: none;
+   padding: 0;
+   text-align: center;
+}
+
+.social_icon ul li {
+   display: inline-block;
+   margin: 0 10px;
+}
+
+.social_icon ul li a img {
+   max-width: 30px;
+}
+
+/* Estilos para el copyright */
+.copyright_section {
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   padding: 15px 0;
+}
 
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f9f9f9;
 }
 
 header {
-    background-color: #e89ac7;
-    color: white;
-    padding: 20px;
-    text-align: center;
+   background-color: #e89ac7;
+   color: white;
+   padding: 20px;
+   text-align: center;
 }
 
 .history {
-    padding: 40px;
-    background-color: #ffffff;
+   padding: 40px;
+   background-color: #ffffff;
 }
 
 .content {
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
+   max-width: 800px;
+   margin: auto;
+   text-align: left;
 }
 
 footer {
-    background-color: #e89ac7;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+   background-color: #e89ac7;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   position: fixed;
+   width: 100%;
+   bottom: 0;
 }
 
 
-.gallery {
+.producto {
    padding: 40px;
    background-color: #ffffff;
 }
@@ -303,10 +316,94 @@ footer {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    gap: 20px;
+   width: auto;
+   /* Ajusta la imagen al 100% del contenedor */
+   height: auto;
+   /* Mantén la proporción de la imagen */
+   max-width: 290px;
+   /* Tamaño máximo opcional */
 }
 
 .gallery-grid img {
    width: 100%;
    height: auto;
    border-radius: 10px;
+}
+
+
+.sinpe {
+   max-width: 200px;
+   max-height: 200px;
+}
+
+
+/* Aplicar a todas las secciones de producto */
+.producto, .sinpe {
+   display: flex;
+   justify-content: center;  /* Centra las imágenes horizontalmente */
+   align-items: center;      /* Centra las imágenes verticalmente */
+   flex-direction: column;   /* Alinea las imágenes en columna */
+   text-align: center;
+   margin-bottom: 20px;      /* Añade un margen inferior entre las secciones */
+}
+
+/* Estilo para la cuadrícula de la galería */
+.gallery-grid {
+   display: flex;
+   flex-wrap: wrap;         /* Permite que las imágenes se muevan a la siguiente línea si es necesario */
+   justify-content: center; /* Centra las imágenes dentro de la cuadrícula */
+   gap: 10px;               /* Espacio entre imágenes */
+}
+
+/* Opcional: Tamaño de las imágenes */
+.gallery-grid img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px;      /* Añade bordes redondeados a las imágenes */
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Añade sombra para mejorar el diseño */
+}
+
+/* Opcional: Estilo para los encabezados de las secciones */
+header {
+   text-align: center;
+   margin: 20px 0;
+}
+
+
+/* Sección para el texto y la imagen de Sinpe */
+.sinpe .gallery-grid {
+   display: flex;
+   justify-content: center; /* Centra horizontalmente el contenido dentro de la sección */
+   align-items: center;     /* Centra verticalmente el texto y la imagen */
+   gap: 20px;               /* Espacio entre el texto y la imagen */
+   margin: 40px 0;          /* Margen superior e inferior para separar la sección */
+   flex-wrap: wrap;         /* Permite que el contenido se adapte en pantallas pequeñas */
+}
+
+/* Estilo para la imagen de Sinpe */
+.sinpe img {
+   max-width: 300px;        /* Limita el tamaño máximo de la imagen */
+   width: 100%;             /* Hace que la imagen sea responsiva */
+   height: auto;
+   border-radius: 8px;      /* Bordes redondeados */
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejorar el diseño */
+}
+
+.sinpe .gallery-grid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.sinpe img {
+   max-width: 100%;
+   height: auto;
+}
+
+/* Estilo para el texto */
+.sinpe p {
+   max-width: 400px;        /* Limita el ancho máximo del texto */
+   text-align: left;        /* Alinea el texto a la izquierda */
+   font-size: 1.1rem;       /* Tamaño de la fuente */
+   line-height: 1.5;        /* Espaciado entre líneas */
 }

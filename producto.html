@@ -11,104 +11,150 @@
    <link rel="stylesheet" href="css/producto.css">
 </head>
 
-
-   <body>
-
-      <script>
-         fetch('services.json')
-             .then(response => response.json())
-             .then(data => {
-                 const servicesList = document.getElementById('services-list');
-                 data.services.forEach(service => {
-                     const listItem = document.createElement('li');
-                     listItem.innerHTML = `<strong>${service.name}</strong>: ${service.description}`;
-                     servicesList.appendChild(listItem);
-                 });
-             });
-     </script>
-     
-
-      <!-- Sección de encabezado -->
-      <header class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="index.html"><img src="images/MonisSweets.jpeg" alt="Logo"></a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="producto.html">Producto</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="acerca.html">Acerca</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="call_text">
-                  <h1>Contacto: 61959969</h1>
-               </div>
-            </div>
-         </nav>
-      </header>
-      <!-- Fin de la sección de encabezado -->
-
-      <!-- Sección de productos -->
-      <header>
-         <h1>Galería de Imágenes</h1>
-     </header>
- 
-     <section class="gallery">
-         <div class="gallery-grid">
-             <img src="images/art19" alt="Imagen 1">
-             <img src="img2.jpg" alt="Imagen 2">
-             <img src="img3.jpg" alt="Imagen 3">
-             <!-- Agrega más imágenes según sea necesario -->
-         </div>
-     </section>
- 
-      <!-- Fin de Maps -->
-
-
-      <!-- Sección de derechos de autor -->
-      <div class="row">
-         <div class="col">
-            <div class="social_icon">
-               <ul>
-                  <li><a href="https://www.facebook.com/profile.php?id=100063797251014&mibextid=LQQJ4d"><img
-                           src="images/fb-icon.png" alt="Facebook"></a></li>
-                  <li><a href="https://www.instagram.com/monissweet?igsh=MXZkcGxxOWF6cTcxNQ=="><img
-                           src="images/instagram-icon.png" alt="Instagram"></a></li>
-                  <li><a
-                        href="https://wa.me/50686033576?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20productos"><img
-                           src="images/whatsapp-icon.jpeg" alt="WhatsApp"></a></li>
+<body>
+   <!-- Sección de encabezado -->
+   <header class="header_section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/MonisSweets.jpeg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="producto.html">Producto</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="acerca.html">Acerca</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
                </ul>
             </div>
+            <div class="call_text">
+               <h1>Contacto: 61959969</h1>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <!-- Fin de la sección de encabezado -->
+
+   <!-- Sección de productos -->
+   <header>
+      <h1>Productos por temporada</h1>
+   </header>
+
+   <section class="producto">
+      <header>
+         <h2>San Valentín</h2>
+      </header>
+      <div class="gallery-grid">
+         <img src="images/Art-22.jpg" alt="Art22" class="product-image" data-product="san-valentin">
+         <p>Deliciosos chocolates decorados con amor para celebrar el día de San Valentín.</p>
+      </div>
+   </section>
+
+   <section class="producto">
+      <header>
+         <h2>Día del padre</h2>
+      </header>
+      <div class="gallery-grid">
+         <img src="images/Art-26.jpg" alt="Art26" class="product-image" data-product="dia-del-padre">
+         <p>Postres especiales para mostrar a papá cuánto lo aprecias en su día.</p>
+      </div>
+   </section>
+
+   <section class="producto">
+      <header>
+         <h2>Día de la madre</h2>
+      </header>
+      <div class="gallery-grid">
+         <img src="images/Art-19.jpg" alt="Art19" class="product-image" data-product="dia-de-la-madre">
+         <p>Exquisitas opciones de dulces para homenajear a las mamás en su día.</p>
+      </div>
+   </section>
+
+   <section class="producto">
+      <header>
+         <h2>Cumpleaños</h2>
+      </header>
+      <div class="gallery-grid">
+         <img src="images/Art-21.jpg" alt="Art21" class="product-image" data-product="cumpleanos">
+         <p>Pasteles y golosinas perfectos para hacer que el cumpleaños sea inolvidable.</p>
+      </div>
+   </section>
+
+   <section class="producto">
+      <header>
+         <h2>Graduación</h2>
+      </header>
+      <div class="gallery-grid">
+         <img src="images/Art-20.jpg" alt="Art20" class="product-image" data-product="graduacion">
+         <img src="images/Art-23.jpg" alt="Art23" class="product-image" data-product="graduacion">
+         <p>Deliciosos postres para celebrar los logros académicos con estilo.</p>
+      </div>
+   </section>
+
+   <section class="producto">
+      <header>
+         <h2>Navidad</h2>
+      </header>
+      <div class="gallery-grid">
+         <img src="images/Art-24.jpg" alt="Art24" class="product-image" data-product="navidad">
+         <img src="images/Art-25.jpg" alt="Art25" class="product-image" data-product="navidad">
+         <video width="640" height="360" controls>
+            <source src="images/Reel.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+         </video>
+         <p>Disfruta de nuestros productos navideños en esta temporada festiva.</p>
+      </div>
+   </section>
+
+   <section class="sinpe">
+      <div class="gallery-grid">
+         <p>Para solicitar algo similar a lo mostrado o personalizado, contacta y realiza el pago mediante sinpe móvil mostrado a continuación:</p>
+         <img src="images/sinpe.jpeg" alt="Sinpe">
+      </div>
+   </section>
+   <!-- Fin de productos -->
+
+   <!-- Sección de derechos de autor -->
+   <div class="row">
+      <div class="col">
+         <div class="social_icon">
+            <ul>
+               <li><a href="https://www.facebook.com/profile.php?id=100063797251014&mibextid=LQQJ4d"><img
+                        src="images/fb-icon.png" alt="Facebook"></a></li>
+               <li><a href="https://www.instagram.com/monissweet?igsh=MXZkcGxxOWF6cTcxNQ=="><img
+                        src="images/instagram-icon.png" alt="Instagram"></a></li>
+               <li><a
+                     href="https://wa.me/50686033576?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20productos"><img
+                        src="images/whatsapp-icon.jpeg" alt="WhatsApp"></a></li>
+            </ul>
          </div>
       </div>
-      <div class="row">
-         <div class="col">
-            <p class="text-center mt-3">2024 All Rights Reserved.</p>
-            <p class="text-center mt-3">Cédula: 116830500</p>
-            <p class="text-center mt-3">Nombre: Warner Salazar Badilla</p>
-            <p class="text-center mt-3">Correo electrónico: </p>
-         </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <p class="text-center mt-3">2024 All Rights Reserved.</p>
+         <p class="text-center mt-3">Cédula: 116830500</p>
+         <p class="text-center mt-3">Nombre: Warner Salazar Badilla</p>
+         <p class="text-center mt-3">Correo electrónico: wsalazarbadilla@gmail.com</p>
+         <img src="images/Author.jpeg" alt="Autor" class="author-img">
       </div>
-      <!-- Fin de la sección de derechos de autor -->
-      </footer>
-      <!-- Fin de la sección de footer con Bootstrap -->
+   </div>
+   <!-- Fin de la sección de derechos de autor -->
 
-      <!-- Scripts de Bootstrap y JavaScript -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Scripts de Bootstrap y JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="js/main.js"></script>
 
-   </body>
+</body>
 
 </html>

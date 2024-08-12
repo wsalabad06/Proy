@@ -11,267 +11,261 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 
-
-   <body>
-
-      <script>
-         document.addEventListener("DOMContentLoaded", function() {
-             // Efecto de desplazamiento suave
-             const links = document.querySelectorAll('a[href^="#"]');
-             for (let link of links) {
-                 link.addEventListener("click", function(event) {
-                     event.preventDefault();
-                     const targetId = link.getAttribute("href").substring(1);
-                     document.getElementById(targetId).scrollIntoView({
-                         behavior: "smooth"
-                     });
-                 });
-             }
-         });
-     </script>
-     
-     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          const apiKey = 'your_api_key';
-          const city = 'Buenos Aires';
-          fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`)
-              .then(response => response.json())
-              .then(data => {
-                  document.getElementById('weather').innerHTML = `
-                      <p>Ciudad: ${data.name}</p>
-                      <p>Temperatura: ${data.main.temp} °C</p>
-                      <p>Clima: ${data.weather[0].description}</p>
-                  `;
-              });
-      });
-  </script>
-  
-
-      <!-- Sección de encabezado -->
-      <header class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="index.html"><img src="images/MonisSweets.jpeg" alt="Logo"></a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="producto.html">Producto</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="acerca.html">Acerca</a>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="call_text">
-                  <h1>Contacto: 61959969</h1>
-               </div>
+<body>
+   <!-- Sección de encabezado -->
+   <header class="header_section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/MonisSweets.jpeg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="producto.html">Producto</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="acerca.html">Acerca</a>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+               </ul>
             </div>
-         </nav>
-      </header>
-      <!-- Fin de la sección de encabezado -->
-
-      <!-- Sección del carrusel -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-               aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-               aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-               aria-label="Slide 3"></button>
-         </div>
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <img src="images/Art-1.jpeg" class="d-block w-100" alt="Slide 1">
-            </div>
-            <div class="carousel-item">
-               <img src="images/Art-2.jpeg" class="d-block w-100" alt="Slide 2">
-            </div>
-            <div class="carousel-item">
-               <img src="images/Art-3.jpeg" class="d-block w-100" alt="Slide 3">
+            <div class="call_text">
+               <h1>Contacto: 61959969</h1>
             </div>
          </div>
-         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-         </button>
-         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-         </button>
+      </nav>
+   </header>
+   <!-- Fin de la sección de encabezado -->
+
+   <!-- Sección del carrusel -->
+   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
       </div>
-      <!-- Fin de la sección del carrusel -->
-
-      <!-- Sección de banner -->
-      <div class="banner_section layout_padding">
-         <h1 class="product_text">PRODUCTO</h1>
-         <p class="there_text">Aqui encontrara la mejor seleccion para poder brindar regalos personalizados</p>
-         <div class="contact_bt_main">
-            <div class="contact_bt"><a href="contacto.html">Contactenos</a></div>
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <img src="images/Art-1.jpeg" class="d-block w-100" alt="Slide 1">
+         </div>
+         <div class="carousel-item">
+            <img src="images/Art-2.jpeg" class="d-block w-100" alt="Slide 2">
+         </div>
+         <div class="carousel-item">
+            <img src="images/Art-3.jpeg" class="d-block w-100" alt="Slide 3">
          </div>
       </div>
-      <!-- Fin de la sección de banner -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+         data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+         data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+      </button>
+   </div>
+   <!-- Fin de la sección del carrusel -->
 
-      <!-- Sección de servicios -->
-      <main class="services_section layout_padding">
-         <h1 class="services_taital">Nuestros servicios</h1>
-         <p class="many_taital">Existen varias soluciones para entregar a sus seres queridos</p>
-         <div class="services_section2 layout_padding">
-            <div class="col-article">
-               <div class="icon_1"><img src="images/Art-4.jpeg" alt="Art4"></div>
-               <h2 class="service_text">Cumpleaños</h2>
-               <p class="dummy_text">Gran variedad de opciones personalizadas para poder sorprender!</p>
-               <div class="read_bt_main">
-                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
-               </div>
-            </div>
-            <div class="col-article">
-               <div class="icon_1"><img src="images/Art-5.jpeg" alt="Art5"></div>
-               <h2 class="service_text">Premio</h2>
-               <p class="dummy_text">Reconoce el esfuerzo con un premio único y personalizado que celebrará cada logro
-                  de
-                  manera inolvidable</p>
-               <div class="read_bt_main">
-                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
-               </div>
-            </div>
-            <div class="col-article">
-               <div class="icon_1"><img src="images/Art-6.jpeg" alt="Art6"></div>
-               <h2 class="service_text">Hogar</h2>
-               <p class="dummy_text">Transforma cada rincón de tu hogar con detalles únicos que reflejan tu estilo y
-                  amor
-                  por lo especial.</p>
-               <div class="read_bt_main">
-                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
-               </div>
-            </div>
-            <div class="col-article">
-               <div class="icon_1"><img src="images/Art-7.jpeg" alt="Art7"></div>
-               <h2 class="service_text">Empresa</h2>
-               <p class="dummy_text">Impresiona a tus clientes y colaboradores con regalos empresariales exclusivos que
-                  dejan una marca duradera</p>
-               <div class="read_bt_main">
-                  <div class="read_bt"><a href="producto.html">Mas...</a></div>
-               </div>
-            </div>
-         </div>
-      </main>
-      <!-- Fin de la sección de servicios -->
+   <!-- Sección de banner -->
+   <div class="banner_section layout_padding">
+      <h1 class="product_text">PRODUCTO</h1>
+      <p class="there_text">Aquí encontrará la mejor selección para poder brindar regalos personalizados</p>
+      <div class="contact_bt_main">
+         <div class="contact_bt"><a href="contacto.html">Contactenos</a></div>
+      </div>
+   </div>
+   <!-- Fin de la sección de banner -->
 
-      <!-- Sección de about -->
-      <main class="about_section layout_padding">
+   <!-- Sección de productos -->
+   <main class="product_section layout_padding">
+      <h1 class="product_text">Nuestros Productos</h1>
+      <div class="container">
          <div class="row">
-            <div class="col-md-6">
-               <h1 class="about_text">Acerca de nosotros</h1>
-               <p class="lorem_text">En Moni's Sweet, creemos que cada regalo debe ser tan único como la persona que lo
-                  recibe. Nos especializamos en crear experiencias memorables a través de regalos personalizados y
-                  arreglos
-                  florales que capturan la esencia de cada ocasión</p>
-               <button type="button" href="acerca.html" class="btn btn-primary">Read More</button>
-            </div>
-            <div class="col-md-6">
-               <div class="image_Acerca"><img src="images/Art-8.jpeg" alt="About Us"></div>
-            </div>
-         </div>
-      </main>
-      <!-- Fin de la sección de about -->
-
-      <!-- Sección de OPCIONES -->
-      <main class="option_section layout_padding">
-         <h1 class="our_text">OPCIONES</h1>
-         <p class="ipsum_text">Ofrecemos variedad de opciones</p>
-         <div class="option_section2 layout_padding">
-            <div class="col-md-6">
-               <div class="container_main">
-                  <img src="images/Art-9.jpeg" alt="Avatar" class="image">
-               </div>
-               <h3 class="temper_text">Regalos Personalizados</h3>
-               <p class="dololr_text">Cada detalle cuenta. Ofrecemos regalos personalizados hechos a mano, perfectos
-                  para
-                  expresar tus sentimientos de una manera única y especial.</p>
-            </div>
-            <div class="col-md-6">
-               <div class="container_main">
-                  <img src="images/Art-10.jpeg" alt="Avatar" class="image">
-               </div>
-               <h3 class="temper_text">Regalos por Temporada</h3>
-               <p class="dololr_text">Celebra cada temporada con nuestros exclusivos regalos temáticos, diseñados para
-                  añadir un toque especial a cualquier festividad o evento.</p>
-            </div>
-         </div>
-      </main>
-      <!-- Fin de la sección de OPCIONES -->
-
-      <!-- Sección de footer con Bootstrap -->
-      <footer class="container-fluid">
-         <div class="row">
-            <div class="col-sm-6">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
                <div class="card">
+                  <img src="images/Art-4.jpeg" class="card-img-top" alt="Art4">
                   <div class="card-body">
-                     <h5 class="card-title">DÉJANOS AYUDARTE</h5>
-                     <p class="card-text">Nuestro objetivo es brindarte las mejores opciones en regalos personalizados.
-                        Nos
-                        aseguramos de que cada regalo cuente una historia y transmita tus sentimientos de la manera más
-                        especial posible.</p>
+                     <h5 class="card-title">Producto 1</h5>
+                     <p class="card-text">Cumpleaños</p>
+                     <button class="btn btn-primary" onclick="toggleDetails('detail1')">Mostrar Detalles</button>
+                     <div id="detail1" class="product-detail">
+                        <p>
+                           Tener regalos personalizados para cada persona segun sus gustos
+                        <div class="read_bt"><a href="producto.html">Más...</a></div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+               <div class="card">
+                  <img src="images/Art-5.jpeg" class="card-img-top" alt="Art5">
+                  <div class="card-body">
+                     <h5 class="card-title">Producto 2</h5>
+                     <p class="card-text">Premio</p>
+                     <button class="btn btn-primary" onclick="toggleDetails('detail2')">Mostrar Detalles</button>
+                     <div id="detail2" class="product-detail">
+                        <p>
+                           Una forma de celebrar diversas actividades es mediante este producto.
+                        <div class="read_bt"><a href="producto.html">Más...</a></div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+               <div class="card">
+                  <img src="images/Art-6.jpeg" class="card-img-top" alt="Art6">
+                  <div class="card-body">
+                     <h5 class="card-title">Producto 3</h5>
+                     <p class="card-text">Hogar</p>
+                     <button class="btn btn-primary" onclick="toggleDetails('detail3')">Mostrar Detalles</button>
+                     <div id="detail3" class="product-detail">
+                        <p>
+                           Se puede utilizar parte del regalo como decoración
+                        <div class="read_bt"><a href="producto.html">Más...</a></div>
+                        </p>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+      </div>
+   </main>
+   <!-- Fin de la sección de productos -->
+
+   <script>
+      function toggleDetails(detailId) {
+         const detailElement = document.getElementById(detailId);
+         if (detailElement.style.display === 'none' || detailElement.style.display === '') {
+            detailElement.style.display = 'block';
+         } else {
+            detailElement.style.display = 'none';
+         }
+      }
+   </script>
+
+
+   <!-- Sección de about -->
+   <main class="about_section layout_padding">
+      <div class="row">
+         <div class="col-md-6">
+            <h1 class="about_text">Acerca de nosotros</h1>
+            <p class="lorem_text">En Moni's Sweet, creemos que cada regalo debe ser tan único como la persona que lo
+               recibe. Nos especializamos en crear experiencias memorables a través de regalos personalizados y
+               arreglos
+               florales que capturan la esencia de cada ocasión</p>
+            <a href="acerca.html" class="btn btn-primary">Read More</a>
+         </div>
+         <div class="col-md-6">
+            <div class="image_Acerca"><img src="images/Art-8.jpeg" alt="About Us"></div>
+         </div>
+      </div>
+   </main>
+   <!-- Fin de la sección de about -->
+
+
+   <!-- Sección de OPCIONES -->
+   <main class="option_section layout_padding">
+      <h1 class="our_text">OPCIONES</h1>
+      <p class="ipsum_text">Ofrecemos variedad de opciones</p>
+      <div class="option_section2 layout_padding">
+         <div class="col-md-6">
+            <div class="container_main">
+               <img src="images/Art-9.jpeg" alt="Avatar" class="image">
+            </div>
+            <h3 class="temper_text">Regalos Personalizados</h3>
+            <p class="dololr_text">Cada detalle cuenta. Ofrecemos regalos personalizados hechos a mano, perfectos
+               para
+               expresar tus sentimientos de una manera única y especial.</p>
+         </div>
+         <div class="col-md-6">
+            <div class="container_main">
+               <img src="images/Art-10.jpeg" alt="Avatar" class="image">
+            </div>
+            <h3 class="temper_text">Regalos por Temporada</h3>
+            <p class="dololr_text">Celebra cada temporada con nuestros exclusivos regalos temáticos, diseñados para
+               añadir un toque especial a cualquier festividad o evento.</p>
+         </div>
+      </div>
+   </main>
+   <!-- Fin de la sección de OPCIONES -->
+
+   <!-- Sección de footer con Bootstrap -->
+   <footer class="container-fluid">
+      <div class="row">
          <div class="col-sm-6">
             <div class="card">
                <div class="card-body">
-                  <h5 class="card-title">NUESTRO DISEÑO</h5>
-                  <p class="card-text">Cada uno de nuestros diseños es único y está hecho con mucho amor y dedicación.
-                     Utilizamos materiales de la mejor calidad para asegurarnos de que cada regalo sea especial y
-                     memorable.</p>
+                  <h5 class="card-title">DÉJANOS AYUDARTE</h5>
+                  <p class="card-text">Nuestro objetivo es brindarte las mejores opciones en regalos personalizados.
+                     Nos
+                     aseguramos de que cada regalo cuente una historia y transmita tus sentimientos de la manera más
+                     especial posible.</p>
                </div>
             </div>
          </div>
-         </div>
-      </footer>
-
-      <!-- Sección de derechos de autor -->
-      <div class="row">
-         <div class="col">
-            <div class="social_icon">
-               <ul>
-                  <li><a href="https://www.facebook.com/profile.php?id=100063797251014&mibextid=LQQJ4d"><img
-                           src="images/fb-icon.png" alt="Facebook"></a></li>
-                  <li><a href="https://www.instagram.com/monissweet?igsh=MXZkcGxxOWF6cTcxNQ=="><img
-                           src="images/instagram-icon.png" alt="Instagram"></a></li>
-                  <li><a
-                        href="https://wa.me/50686033576?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20productos"><img
-                           src="images/whatsapp-icon.jpeg" alt="WhatsApp"></a></li>
-               </ul>
+      </div>
+      <div class="col-sm-6">
+         <div class="card">
+            <div class="card-body">
+               <h5 class="card-title">NUESTRO DISEÑO</h5>
+               <p class="card-text">Cada uno de nuestros diseños es único y está hecho con mucho amor y dedicación.
+                  Utilizamos materiales de la mejor calidad para asegurarnos de que cada regalo sea especial y
+                  memorable.</p>
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="col">
-            <p class="text-center mt-3">2024 All Rights Reserved.</p>
-            <p class="text-center mt-3">Cédula: 116830500</p>
-            <p class="text-center mt-3">Nombre: Warner Salazar Badilla</p>
-            <p class="text-center mt-3">Correo electrónico: </p>
+      </div>
+   </footer>
+
+   <!-- Sección de derechos de autor -->
+   <div class="row">
+      <div class="col">
+         <div class="social_icon">
+            <ul>
+               <li><a href="https://www.facebook.com/profile.php?id=100063797251014&mibextid=LQQJ4d"><img
+                        src="images/fb-icon.png" alt="Facebook"></a></li>
+               <li><a href="https://www.instagram.com/monissweet?igsh=MXZkcGxxOWF6cTcxNQ=="><img
+                        src="images/instagram-icon.png" alt="Instagram"></a></li>
+               <li><a
+                     href="https://wa.me/50686033576?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20productos"><img
+                        src="images/whatsapp-icon.jpeg" alt="WhatsApp"></a></li>
+            </ul>
          </div>
       </div>
-      <!-- Fin de la sección de derechos de autor -->
-      </footer>
-      <!-- Fin de la sección de footer con Bootstrap -->
+   </div>
+   <div class="row">
+      <div class="col">
+         <p class="text-center mt-3">2024 All Rights Reserved.</p>
+         <p class="text-center mt-3">Cédula: 116830500</p>
+         <p class="text-center mt-3">Nombre: Warner Salazar Badilla</p>
+         <p class="text-center mt-3">Correo electrónico: wsalazarbadilla@gmail.com</p>
+         <img src="images/Author.jpeg" alt="Autor" class="author-img">
+      </div>
+   </div>
+   <!-- Fin de la sección de derechos de autor -->
+   </footer>
+   <!-- Fin de la sección de footer con Bootstrap -->
 
-      <!-- Scripts de Bootstrap y JavaScript -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Scripts de Bootstrap y JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-   </body>
+</body>
 
 </html>
